@@ -8,6 +8,7 @@ Feature: Account statement
       | DEP2 | 450 |
       | DEP3 | 50  |
       | DEP4 | 150  |
+      | DEP8 | 150  |
     And withdrawls are made
       | CHQ001 | 675.55 |
     When statement is produced
