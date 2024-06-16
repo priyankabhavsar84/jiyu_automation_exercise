@@ -11,10 +11,10 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         dryRun = false,
         monochrome = false,
-        features = {"src/test/resources/tests"},
+        features = {"src/test/resources/tests/"},
         glue = {"glue"},
         plugin = {"html:target/cucumber-html/cucumber.html", "json:target/cucumber-json/cucumber.json"},
-        tags = ""
+        tags = " "
 )
 public class Runner {
     @AfterClass
