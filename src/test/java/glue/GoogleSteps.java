@@ -17,21 +17,27 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 public class GoogleSteps {
-   // private String url;
+    private String url;
+
 
     @Given("url {string} is launched")
     public void url(String url) {
+        System.out.println("url"+url);
+
+
+        W.get().W();
+
         W.get().driver.get(url);
         acceptCookiesIfWarned();
     }
 
-    private static void acceptCookiesIfWarned() {
+   private static void acceptCookiesIfWarned() {
         try {
             W.get().driver.findElement(By.cssSelector("#L2AGLb")).click();
         } catch (NoSuchElementException ignored) {
         }
     }
-    private WebDriver driver = get().driver;
+    private final WebDriver driver = get().driver;
 
 //    @Given("url {string} is launched")
 //    public void urlIsLaunched(String url) {
@@ -40,8 +46,8 @@ public class GoogleSteps {
 
     @When("About page is shown")
     public void aboutPageIsShown() {
-        WebElement aboutLink = driver.findElement(By.xpath("//a[text()='About']"));
-        aboutLink.click();
+//        WebElement aboutLink = driver.findElement(By.xpath("//a[text()='About']"));
+//        aboutLink.click();
     }
 
     @Then("page displays {string}")

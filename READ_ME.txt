@@ -22,7 +22,7 @@ It should be obvious that the main 'application' code should be generic work wit
 the tests.
 
 Executing 'mvn test' should succeed.
-mvn test -Dwebdriver.chrome.driver=path/to/chromedriver -Dcucumber.filter.tags="@regression"
+mvn test -D'webdriver.chrome.driver'="C:\\Users\\halva\\jiyu_automation_exercise\\driver\\chromedriver.exe"
 
 Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
 
