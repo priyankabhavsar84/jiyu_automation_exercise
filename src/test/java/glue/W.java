@@ -9,7 +9,9 @@ public class W {
     private static W instance = null;
 
     public static W get() {
+        System.out.println("get");
         if (instance == null) {
+            System.out.println("====w classss");
             instance = new W();
         }
         return instance;
@@ -17,11 +19,13 @@ public class W {
 
     protected WebDriver driver;
 
-    private W() {
+    public void W() {
+
+        System.out.println("test");
+
         String pathToDriver = System.getProperty("webdriver.chrome.driver");
-        if (pathToDriver == null || pathToDriver.isEmpty()) {
-            throw new RuntimeException("define a path to the chrome driver using system property 'webdriver.chrome.driver'");
-        }
+        System.out.println("====path"+pathToDriver);
+//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\halva\\jiyu_automation_exercise\\driver\\chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", pathToDriver);
 
         driver = new ChromeDriver();

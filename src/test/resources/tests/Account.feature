@@ -3,6 +3,7 @@ Feature: Account statement
   Background:
     Given Account exists for Acc No. "12345678" with Name "Bob Smith"
     And deposits are made
+    |account|amount|
       | INIT | 200 |
       | DEP1 | 100 |
       | DEP2 | 450 |
