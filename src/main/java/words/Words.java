@@ -1,22 +1,27 @@
 package words;
 
-import java.util.List;
+import java.util.*;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Words {
     public static List<String> getUniqueWordsFromSentence(String sentence) {
-        try {
-            return Arrays.stream(sentence.toLowerCase()
-                            .split("[\\s;.,:\\!\\?]+"))
-                    .distinct()
-                    .collect(Collectors.toList());
-        } catch (UnsupportedOperationException e) {
-            throw e;
-        }
+        String normalizedSentence = sentence.toLowerCase().replaceAll("[^a-z ]", " ");
+
+// Split the sentence into words
+        String[] wordsArray = normalizedSentence.split("\\s+");
+
+// Convert the array to a set to remove duplicates
+        Set<String> wordsSet = new HashSet<>(Arrays.asList(wordsArray));
+
+// Convert the set back to a list and sort it
+        List<String> uniqueWordsList = new ArrayList<>(wordsSet);
+        Collections.sort(uniqueWordsList);
+        System.out.printf("===" + uniqueWordsList);
+
+        return uniqueWordsList;
+
     }
 }
