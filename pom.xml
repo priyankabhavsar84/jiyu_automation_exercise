@@ -30,6 +30,12 @@
             <artifactId>cucumber-junit</artifactId>
             <version>7.5.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.abego.treelayout</groupId>
+            <artifactId>org.abego.treelayout.core</artifactId>
+            <version>1.0.3</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
