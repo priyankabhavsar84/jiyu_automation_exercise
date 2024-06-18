@@ -30,6 +30,24 @@
             <artifactId>cucumber-junit</artifactId>
             <version>7.5.0</version>
         </dependency>
+        <!-- Cucumber dependencies -->
+         <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.0.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JUnit dependency -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Additional dependencies -->
+        <!-- Add any other dependencies required -->
         <dependency>
             <groupId>org.abego.treelayout</groupId>
             <artifactId>org.abego.treelayout.core</artifactId>
