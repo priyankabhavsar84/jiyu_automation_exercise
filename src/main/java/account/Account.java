@@ -7,18 +7,18 @@ import java.util.List;
 public class Account {
     private String accountNumber;
     private String accountName;
-    private double balance;
-    private List<String> transactions;
+    static int balance;
+    private static List<String> transactions;
 
     public Account(String accountNumber, String accountName) {
         this.accountNumber = accountNumber;
         this.accountName = accountName;
-        this.balance = 0.0;
+        this.balance = 0 ;
         this.transactions = new ArrayList<>();
     }
 
-    public void deposit(String transactionId, double amount) {
-        transactions.add(transactionId);
+    public static void deposit(String account, double amount) {
+        transactions.add(account);
         balance += amount;
     }
 
@@ -39,3 +39,5 @@ public class Account {
         return statement.toString();
     }
 }
+
+
